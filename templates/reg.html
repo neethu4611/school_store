@@ -92,10 +92,9 @@
 <div class="title">Click open form to place order Registration</div>
 <button class="open-button" onclick="openForm()">Open Form</button>
 <ul>
-              {% if user.is_authenticated %}
-									<li>hello {{user.username}} <a href="{% url 'credentials_app:logout' %}">Logout</a></li>
-
-									{% endif %}
+    {% if user.is_authenticated %}
+    <li>hello {{user.username}} <a href="{% url 'credentials_app:logout' %}">Logout</a></li>
+    {% endif %}
           </ul>
  <br><button type="button" class="btn_cancel" onclick="closeForm()">Close</button>
 </div>
@@ -202,6 +201,7 @@ $(document).ready(function(){
  department.on('change',function(){
     course.html($options.filter('[value="'+ this.value  +'"]'));
  }).trigger('change');
+
 });
 </script>
  </body>
