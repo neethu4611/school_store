@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from .models import Register,Department,Course
 def collegestore(request):
     dept=Department.objects.all()
-    return render(request,'index.html',{'dept':dept})
+    return render(request,'templates/index.html',{'dept':dept})
 def reg(request):
 
 
